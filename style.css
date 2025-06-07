@@ -43,6 +43,12 @@ body {
   text-decoration: none;
 }
 
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
 .hero {
   display: flex;
   flex-wrap: wrap;
@@ -229,14 +235,6 @@ body {
 .step-card.yellow .icon {
   color: #facc15;
 }
-
-{
-      background: #fcfbf9;
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #222;
-    }
     .container {
       max-width: 1200px;
       margin: 60px auto;
@@ -685,3 +683,26 @@ body {
       border-top: 1px solid #ececec;
       padding-top: 18px;
     }
+
+    @media (max-width: 768px) {
+      .hamburger {
+    display: block;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+  }
+
+  .nav-links, .auth-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards-row, .blog-posts {
+    flex-direction: column;
+  }
+}
